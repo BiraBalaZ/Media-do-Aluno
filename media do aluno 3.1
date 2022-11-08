@@ -1,16 +1,19 @@
+import random
+
 #Coletando nome e idade do aluno
-nome  = str(input('Digite aqui o nome completo do aluno: \n >>>'))
-idade = int(input(f'Qual a idade de {nome}: \n >>>'))
-altura = float(input(f'Qual a altura de {nome}: \n >>>'))
-peso = float(input(f'Qual o peso de {nome}: \n >>>'))
-id = '0462584'
+nome    = str(input('Digite aqui o nome completo do aluno: \n >>>'))
+idade   = int(input(f'Qual a idade de {nome}: \n >>>'))
+altura  = float(input(f'Qual a altura de {nome}: \n >>>'))
+peso    = float(input(f'Qual o peso de {nome}: \n >>>'))
+id      = random.randint(100000, 999999)
 
 #Calculando o IMC do Aluno
 imc = peso / altura
 
-#Imprimindo resultados de nome, idade e ID
-    #Lembrete para mim mesmo: formatar em modo tabela as informações do aluno à seguir: (usar espaçamento de 30 caracteres)
-print(f'Encontrado: \n ID do Aluno: {id} \n Nome: {nome} \n Idade: {idade} \n Peso: {peso.:2f} \n Altura: {altura}\n IMC: {imc} \n')
+#Imprimindo resultados de nome, idade e ID#Lembrete para mim mesmo: formatar em modo tabela as informações do aluno à seguir: (usar espaçamento de 30 caracteres)
+print('|____________________________|')
+print(f'Encontrado: \n |ID do Aluno: {id:30}|\n |Nome: {nome:30}| \n |Idade: {idade:30}| \n |Peso: {peso:.2f:30}| \n |Altura: {altura:30}| \n |IMC: {imc:.2f:30}| \n')
+print('|----------------------------|')
 
 #Exibindo mensagem de acordo com o IMC do Aluno
 if imc < 18.5:
