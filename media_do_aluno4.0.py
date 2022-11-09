@@ -3,13 +3,15 @@ import numpy as np
 import random
 
 #Coletando nome e idade do aluno
-nome    = str(input('Digite aqui o primeiro nome do aluno: \n >>>'))
-idade   = int(input(f'\nQual a idade de {nome}: \n >>>'))
-altura  = float(input(f'\nQual a altura de {nome}: \n >>>'))
-peso    = float(input(f'\nQual o peso de {nome}: \n >>>'))
-id      = random.randint(100000, 999999)
+nome   = str(input('Digite aqui o primeiro nome do aluno: \n >>>'))
+idade  = int(input(f'\n Qual a idade de {nome}: \n >>>'))
+altura = float(input(f'\n Qual a altura de {nome}: \n >>>'))
+peso   = float(input(f'\n Qual o peso de {nome}: \n >>>'))
 
-#Calculando o IMC do Aluno
+#Gerando um ID entre 100 mil e 999 mil
+id = random.randint(100000, 999999)
+
+#Fórmula do IMC
 imc = int(peso / (altura**2))
 
 #Variaveis da colunda
@@ -25,13 +27,13 @@ print(f'\n{tabela}')
 
 #Exibindo mensagem de acordo com o IMC do Aluno
 if imc < 18.5:
-	print(f'\n{nome} está abaixo do peso.\n')
+	print(f'\n{nome} está abaixo do peso. \n')
 elif imc >= 18.5 and imc <= 24.99:
-	print(f'\n{nome} está com peso normal.\n')
+	print(f'\n{nome} está com peso normal. \n')
 elif imc >= 25.0 and imc <= 29.99:
-	print(f'\n{nome} está acima do peso.\n')
+	print(f'\n{nome} está acima do peso. \n')
 elif imc >= 30.0:
-	print(f'\n{nome} está muito acima do peso.\n')
+	print(f'\n{nome} está muito acima do peso. \n')
 
 #Coletando as notas de cada matéria do aluno
 n1 = float(input(f'Digite a nota de Portguês do aluno {nome}      \n >>>'))
@@ -55,10 +57,10 @@ print(f'\nCom as notas fornecidas, a média do aluno {nome} de {idade} anos é {
 #Se a média for 5 ele passou, mas precisa melhorar;
 #Se a média for 4 ou abaixo, ele reprovou.
 if media >= 6.0 and media <= 10:
-	print(f'{nome} foi APROVADO com SUCESSO!\n')
+	print(f'{nome} foi APROVADO com SUCESSO! \n')
 elif media == 5.0:
-	print(f'{nome} foi aprovado, mas pode melhorar\n')
+	print(f'{nome} foi aprovado, mas pode melhorar \n')
 elif media <= 4.0 and media >= -5.0:
-	print(f'{nome} foi REPROVADO, precisa se empenhar mais\n')
+	print(f'{nome} foi REPROVADO, precisa se empenhar mais \n')
 else:
     print('[ERROR 001] Erro desconhecido, favor contatar o Dev encarregado')
